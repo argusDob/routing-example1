@@ -1,0 +1,32 @@
+.input-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  position: relative;
+
+  span {
+    position: absolute;
+    transform: translateY(2.625rem);
+    right: 2%; // top: 55%;
+  }
+
+  &__label {
+    margin-bottom: 0.5rem;
+  }
+
+  &__field {
+    border: 0.125rem solid #d1d5db;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #374151;
+    background-color: #e5e7eb;
+
+    &:focus {
+      border-color: #374151;
+    }
+
+    &::placeholder {
+      color:  #374151;
+    }
+  }
+}
