@@ -2,16 +2,10 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
-  position: relative;
-
-  span {
-    position: absolute;
-    transform: translateY(2.625rem);
-    right: 2%; // top: 55%;
-  }
 
   &__label {
     margin-bottom: 0.5rem;
+    text-align: left;
   }
 
   &__field {
