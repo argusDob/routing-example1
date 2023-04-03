@@ -1,0 +1,8 @@
+.message-block {
+  &__success {
+    color: green;
+  }
+  &__warning {
+    color: orange;
+  }
+}
