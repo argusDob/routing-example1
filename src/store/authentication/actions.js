@@ -18,7 +18,15 @@ const login = async ({ commit }, { username, password }) => new Promise((resolve
   }, 2000);
 });
 
+const logout = async ({ commit }) => new Promise((resolve) => {
+  setTimeout(() => {
+    commit('SET_AUTHENTICATION_STATUS', false);
+    localStorage.removeItem('isLoggedIn');
+    resolve(200);
+  }, 500);
+});
+
 export default {
   login,
-  // logout,
+  logout,
 };
