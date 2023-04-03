@@ -26,12 +26,6 @@ THEN set user as logged out and redirect to /login
 IF user is logged in and leaves the site
 THEN remember the session and allow the user to access the dashboard without having to log in again
 
-
-
-ioannis dimitriou
-The above can be a flowchart as well ,right?
-Yes, the above pseudocode can be translated into a flowchart diagram. Flowcharts are a graphical representation of a process, and can be a helpful tool to visualize the steps involved in a system.
-
 ## Project setup
 ```
 yarn install
