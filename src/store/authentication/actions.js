@@ -7,8 +7,6 @@ const login = async ({ commit }, { username, password }) => new Promise((resolve
     if (username === 'uncinc' && password === 'letmein') {
       commit('SET_AUTHENTICATION_STATUS', true);
       localStorage.setItem('isLoggedIn', true);
-
-      console.log('in the login ');
       resolve(200);
     } else {
       const errorData = { code: 403, message: 'Invalid Credentials' };
