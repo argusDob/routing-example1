@@ -4,9 +4,11 @@ import Dashboard from '../views/DashBoard.vue';
 
 const routes = [
   { path: '/', redirect: '/home' },
-  { path: '/home', component: Home },
-  { path: '/login', component: Login },
-  { path: '/dashboard', component: Dashboard, meta: { requiresAuth: true } },
+  { path: '/home', component: Home, name: 'home' },
+  { path: '/login', component: Login, name: 'login' },
+  {
+    path: '/dashboard', component: Dashboard, name: 'dashboard', meta: { requiresAuth: true },
+  },
   { path: '*', redirect: '/login' },
 ];
 
