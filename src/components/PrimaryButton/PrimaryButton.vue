@@ -1,11 +1,12 @@
 <template>
-  <button :disabled=isDisabled class="primary-button">
+  <button :disabled="isDisabled" class="primary-button">
     <span>{{ text }}</span>
   </button>
 </template>
 
 <script>
 export default {
+  name: 'Primary-Button',
   props: {
     text: {
       type: String,

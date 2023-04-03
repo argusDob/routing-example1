@@ -8,7 +8,7 @@
 import HomeInput from '@/components/Home/HomeInput.vue';
 
 export default {
-  name: 'HomeView',
+  name: 'Home-View',
   components: {
     HomeInput,
   },

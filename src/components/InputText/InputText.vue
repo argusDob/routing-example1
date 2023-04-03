@@ -15,11 +15,12 @@
 
 <script>
 export default {
+  name: 'Input-Text',
   props: {
     autocomplete: {
       type: Boolean,
+      default: true,
     },
-
     label: {
       type: String,
       required: true,

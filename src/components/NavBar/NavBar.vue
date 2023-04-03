@@ -2,8 +2,8 @@
   <div class="nav-bar">
     <nav>
       <span v-for="link in filteredLinks" :key="link.path">
-        <router-link :to="link.path" @click.native="handleClick(link)"
-        exact >{{ link.label + "" }} |
+        <router-link :to="link.path" @click.native="handleClick(link)" exact
+          >{{ link.label + "" }} |
         </router-link>
       </span>
     </nav>
@@ -21,6 +21,7 @@ const ALLOWED_LINKS = {
 };
 
 export default {
+  name: 'Nav-Bar',
   computed: {
     ...mapGetters('authentication', ['isAuthenticated']),
     ...mapState('authentication', {
@@ -28,7 +29,9 @@ export default {
     }),
     filteredLinks() {
       const filteredLinks = navLinksList.filter((link) => {
-        const isAllowed = ALLOWED_LINKS[this.isAuthenticated ? 'isAuthenticated' : 'isNotAuthenticated'].includes(link.label);
+        const isAllowed = ALLOWED_LINKS[
+          this.isAuthenticated ? 'isAuthenticated' : 'isNotAuthenticated'
+        ].includes(link.label);
         return isAllowed;
       });
       return filteredLinks;

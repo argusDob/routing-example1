@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'Link-Action',
   props: {
     label: {
       type: String,

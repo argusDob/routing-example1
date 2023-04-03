@@ -1,7 +1,7 @@
 <template>
   <div class="login-form">
     <div class="login-form__container">
-        <MessageBlock :message="messageBlock.message" :type="messageBlock.type"/>
+      <MessageBlock :message="messageBlock.message" :type="messageBlock.type" />
       <form @submit.prevent="submit">
         <div v-for="(field, index) in fields" :key="index">
           <InputText v-bind="field" @change="handleChange" />
@@ -24,6 +24,7 @@ import SubmitButton from '../PrimaryButton/PrimaryButton.vue';
 import getFormConfig from './login.form.config';
 
 export default {
+  name: 'Login-Form',
   components: {
     InputText,
     MessageBlock,
@@ -64,13 +65,14 @@ export default {
         this.isSubmitting = false;
         this.$router.push(this.$route.query.redirect || '/dashboard');
       } catch (error) {
+        console.log(typeof error.message);
         const myError = JSON.parse(error.message);
         this.messageBlock.message = myError.message;
         this.messageBlock.type = 'warning';
         this.isSubmitting = false;
       }
     },
-    async submit() {
+    submit() {
       this.isSubmitting = true;
 
       if (!this.username || !this.password) {
