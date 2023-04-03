@@ -1,22 +1,16 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link v-for="link in links" :key="link.path" :to="link.path">{{
-        link.label + ""
-      }} | </router-link>
-    </nav>
+    <NavBar/>
     <router-view />
   </div>
 </template>
 
 <script>
-import navLinksList from './router/navLinks';
+import NavBar from './components/NavBar/NavBar.vue';
 
 export default {
-  data() {
-    return {
-      links: navLinksList,
-    };
+  components: {
+    NavBar,
   },
 };
 </script>
@@ -40,10 +34,6 @@ nav {
   a {
     font-weight: bold;
     color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
   }
 }
 </style>
