@@ -6,6 +6,11 @@
 
 <script>
 
+const MESSAGE_TYPE_CLASSES = {
+  warning: 'message-block__warning',
+  success: 'message-block__success',
+};
+
 export default {
   props: {
     message: {
@@ -19,10 +24,7 @@ export default {
   },
   computed: {
     additionalClasses() {
-      const classes = [];
-      if (this.type === 'warning') { classes.push('message-block__warning'); }
-      if (this.type === 'success') { classes.push('message-block__success'); }
-      return classes;
+      return MESSAGE_TYPE_CLASSES[this.type] ? [MESSAGE_TYPE_CLASSES[this.type]] : [];
     },
   },
 };
