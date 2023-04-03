@@ -65,7 +65,6 @@ export default {
         this.isSubmitting = false;
         this.$router.push(this.$route.query.redirect || '/dashboard');
       } catch (error) {
-        console.log(typeof error.message);
         const myError = JSON.parse(error.message);
         this.messageBlock.message = myError.message;
         this.messageBlock.type = 'warning';
