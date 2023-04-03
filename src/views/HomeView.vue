@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HomeInput from '@/components/Home/HomeInput.vue';
+import HomeInput from '@/components/HomeInput/HomeInput.vue';
 
 export default {
   name: 'Home-View',
